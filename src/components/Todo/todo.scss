@@ -1,0 +1,94 @@
+$form-height: 50px;
+
+::selection {
+  background: none;
+}
+
+.completed {
+  p {
+    text-decoration: line-through;
+    color: gray;
+  }
+  border-color: $secondary!important;
+}
+
+.close {
+  opacity: 0;
+}
+
+.swiper-container {
+  overflow: hidden;
+
+  .swiper-wrapper {
+    height: 35vh;
+    display: flex;
+
+    ul {
+      height: 100%;
+      overflow-y: scroll;
+      padding: 0;
+
+      li {
+        border: 1px solid $accent;
+
+        &:hover {
+          .close {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  order: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination {
+  margin-top: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  opacity: 1;
+  padding: 0.5em;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  color: $accent;
+  border: solid 1px $accent;
+}
+
+input {
+  padding: 0.5em;
+  border: 0;
+  border-bottom: solid 1px $accent;
+  width: 100%;
+  background-color: $primary!important;
+}
+
+.todo {
+  padding: 10px;
+  border: solid thin blue;
+
+  form {
+    button {}
+  }
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  margin-top: 0.5em;
+}

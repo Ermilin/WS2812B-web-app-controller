@@ -1,0 +1,117 @@
+@import "bootstrap/scss/bootstrap.scss";
+@import "./components/variables";
+@import "./components/Todo/todo";
+
+.row {
+  margin: 0;
+}
+
+.nav-svg {
+  height: auto;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: $primary;
+}
+
+label {
+  color: $secondary;
+}
+
+input[type="checkbox"] {
+  display: none;
+
+  &:checked + label {
+    color: $accent;
+  }
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.big-border {
+  border: solid 1px black;
+}
+
+.big {
+  padding: 1em;
+  width: 50vw;
+  height: 50vh;
+}
+
+.lights {
+  display: flex;
+}
+
+.lights-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    position: absolute;
+  }
+
+  svg {
+    g {
+      circle {
+        &:nth-of-type(1) {
+          stroke: $secondary!important;
+        }
+      }
+
+      path {
+        stroke: $accent!important;
+      }
+    }
+  }
+}
+
+.medium {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 100%;
+  padding: 1em;
+}
+
+.systems {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  .system {
+    outline: solid 1px black;
+    width: 25%;
+    height: 50%;
+
+    a {
+      padding: 1em;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      svg {
+        margin-top: 50%;
+        width: 50%;
+        fill: $accent!important;
+      }
+    }
+  }
+}
