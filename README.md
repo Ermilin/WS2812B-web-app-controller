@@ -1,2 +1,1 @@
-![ChatterDEMO](https://i.imgur.com/rdjU90c.png)
-# Smart-Home2
+A web server to control WS2812B LED's with. React front end, Node back end.
